@@ -152,7 +152,7 @@ void GetHeartRateSpO2(void)
 								un_brightness = MAX_BRIGHTNESS;
 				}
 		}
-		maxim_heart_rate_and_oxygen_saturation(aun_ir_buffer, n_ir_buffer_length, aun_red_buffer, &n_spo2, &ch_spo2_valid, &n_heart_rate, &ch_hr_valid); // read
+		maxim_heart_rate_and_oxygen_saturation(aun_ir_buffer, n_ir_buffer_length, aun_red_buffer, &n_spo2, &ch_spo2_valid, &n_heart_rate, &ch_hr_valid);
 		if(COUNT++ > 8)
 		{
 					COUNT = 0;
@@ -239,11 +239,11 @@ void GetHeartRateSpO2(void)
 					}
 					else
 					{
-							hrValidCnt = 0; // this check logic can learn
+							hrValidCnt = 0;
 							if (hrTimeout == 4)
 							{
 									hrAvg = 0;
-									hrBuffFilled = 0; // fail
+									hrBuffFilled = 0;
 							}
 							else
 							{
@@ -334,7 +334,7 @@ void GetHeartRateSpO2(void)
 					else
 					{
 							spo2ValidCnt = 0;
-							if (spo2Timeout == 4) // same logic
+							if (spo2Timeout == 4)
 							{
 									spo2Avg = 0;
 									spo2BuffFilled = 0;

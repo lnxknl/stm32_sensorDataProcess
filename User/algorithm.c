@@ -144,7 +144,7 @@ void maxim_heart_rate_and_oxygen_saturation(uint32_t *pun_ir_buffer, int32_t n_i
     else
     {
         *pn_heart_rate = -999; // unable to calculate because # of peaks are too small
-        *pch_hr_valid  = 0; // flag read
+        *pch_hr_valid  = 0;
     }
 
     //  load raw value again for SPO2 calculation : RED(=y) and IR(=X)
